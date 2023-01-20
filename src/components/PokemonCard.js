@@ -4,9 +4,9 @@ import Card from 'react-bootstrap/Card';
 import { FavoritesContext } from '../FavoritesProvider';
 import Button from 'react-bootstrap/Button'
 
-const {addFavorite} = useContext(FavoritesContext)
 
 function PokemonCard({ name }) {
+  const {addFavorite} = useContext(FavoritesContext)
   const [pokemon, setPokemon] = useState(null);
 
   useEffect(() => {
