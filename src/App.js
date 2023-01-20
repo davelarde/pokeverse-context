@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
+import { FavoritesProvider } from './FavoritesProvider';
 import { Home, PokemonDetails } from './routes';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   }, []);
 
   return (
+    <FavoritesProvider>
     <BrowserRouter>
       <div data-testid='app'>
         <Navigation />
@@ -28,6 +30,7 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
+    </FavoritesProvider>
   );
 }
 
